@@ -1,6 +1,13 @@
-{{yield (hash
-    head=(component "head-base")
-    shoulders=(component "shoulders-base")
-    knees=(component "knees-base")
-    toes=(component "toes-base")
-    )}}
+{{#if hasBlock}}
+    {{yield (hash
+        head=(component "head-base")
+        shoulders=(component "shoulders-base")
+        knees=(component "knees-base")
+        toes=(component "toes-base"))
+    }}
+{{else}}
+    {{head-base}}
+    {{shoulders-base}}
+    {{knees-base}}
+    {{toes-base}}
+{{/if}}

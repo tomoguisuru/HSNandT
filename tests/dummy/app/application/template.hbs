@@ -1,0 +1,21 @@
+<h2>Ember Contextual Components</h2>
+
+<h3>No Block</h3>
+{{hsn-t}}
+
+
+<h3>Block</h3>
+<h4>Headless</h4>
+{{#hsn-t as |c|}}
+    {{c.shoulders}}
+    {{c.knees}}
+    {{c.toes}}
+{{/hsn-t}}
+
+<h4>Block with Blocked Components</h4>
+{{#hsn-t as |c|}}
+    {{#c.head}}
+    <p>BRAINS!!!!</p>
+    {{/c.head}}
+    {{c.shoulders}}
+{{/hsn-t}}
