@@ -7,18 +7,18 @@
 
 <h3>Block</h3>
 <h4>Headless</h4>
-{{#hsn-t as |c|}}
-    {{c.shoulders}}
-    {{c.knees}}
-    {{c.toes}}
+{{#hsn-t as |comps|}}
+    {{comps.shoulders}}
+    {{comps.knees}}
+    {{comps.toes}}
 {{/hsn-t}}
 
 <hr />
 
 <h4>Block with Blocked Components</h4>
-{{#hsn-t as |c|}}
-    {{#c.head}}
+{{#hsn-t as |comps|}}
+    {{#comps.head clickCB=(action "clicked")}}
     <p>BRAINS!!!!</p>
-    {{/c.head}}
-    {{c.shoulders}}
+    {{/comps.head}}
+    {{comps.shoulders}}
 {{/hsn-t}}
