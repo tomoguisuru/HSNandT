@@ -18,19 +18,19 @@
 <h4>Block with Blocked Components</h4>
 {{#hsn-t as |comps|}}
     {{#comps.head clickCB=(action "clicked")}}
-        <p>BRAINS!!!!</p>
+    <pre>
+     \\\\\\\\\
+    </pre>
     {{/comps.head}}
     {{comps.shoulders}}
 {{/hsn-t}}
 
 <hr />
 
-<h4>Block with Customized Components</h4>
-{{#hsn-t headComponent="mod-head" as |comps|}}
+<h4>Customized Components</h4>
+{{#hsn-t headComponent='mod-head' as |comps|}}
+    {{comps.head}}
     {{comps.shoulders}}
-    {{#comps.head clickCB=(action "clicked")}}
-        <p>Blah blah blah blah blah</p>
-    {{/comps.head}}
     {{comps.toes}}
     {{comps.knees}}
 {{/hsn-t}}

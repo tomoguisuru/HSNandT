@@ -2,10 +2,12 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
+  isActive: false,
+
   actions: {
 
     clicked() {
-      console.log('I was clicked');
+      this.toggleProperty('isActive');
     }
 
   }

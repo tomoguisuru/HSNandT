@@ -1,1 +1,9 @@
 <h1>Lets be a mutant</h1>
+
+{{#hsn-t as |comps|}}
+    {{comps.head isActive=(readonly isActive)
+                 clickCB=(action "clicked")}}
+    {{comps.shoulders}}
+    {{comps.knees}}
+    {{comps.toes}}
+{{/hsn-t}}
