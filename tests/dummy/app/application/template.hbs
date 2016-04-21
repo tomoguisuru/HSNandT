@@ -1,36 +1,8 @@
-<h2>Ember Contextual Components</h2>
-
-<h3>No Block</h3>
-{{hsn-t}}
-
+<h1>Ember Contextual Components</h1>
+<nav>
+    {{#link-to "overview" activeClass="isActive"}}Overview{{/link-to}}
+    {{#link-to "mutate" activeClass="isActive"}}Data Example{{/link-to}}
+</nav>
 <hr />
 
-<h3>Block</h3>
-<h4>Headless</h4>
-{{#hsn-t as |comps|}}
-    {{comps.shoulders}}
-    {{comps.knees}}
-    {{comps.toes}}
-{{/hsn-t}}
-
-<hr />
-
-<h4>Block with Blocked Components</h4>
-{{#hsn-t as |comps|}}
-    {{#comps.head clickCB=(action "clicked")}}
-    <p>BRAINS!!!!</p>
-    {{/comps.head}}
-    {{comps.shoulders}}
-{{/hsn-t}}
-
-<hr />
-
-<h4>Block with Customized Components</h4>
-{{#hsn-t headComponent="mod-head" as |comps|}}
-    {{comps.shoulders}}
-    {{#comps.head clickCB=(action "clicked")}}
-        <p>Blah blah blah blah blah</p>
-    {{/comps.head}}
-    {{comps.toes}}
-    {{comps.knees}}
-{{/hsn-t}}
+{{outlet}}

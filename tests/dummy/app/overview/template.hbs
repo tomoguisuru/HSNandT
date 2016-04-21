@@ -1,0 +1,36 @@
+<h2>The Pieces</h2>
+
+<h3>No Block</h3>
+{{hsn-t}}
+
+<hr />
+
+<h3>Block</h3>
+<h4>Headless</h4>
+{{#hsn-t as |comps|}}
+    {{comps.shoulders}}
+    {{comps.knees}}
+    {{comps.toes}}
+{{/hsn-t}}
+
+<hr />
+
+<h4>Block with Blocked Components</h4>
+{{#hsn-t as |comps|}}
+    {{#comps.head clickCB=(action "clicked")}}
+        <p>BRAINS!!!!</p>
+    {{/comps.head}}
+    {{comps.shoulders}}
+{{/hsn-t}}
+
+<hr />
+
+<h4>Block with Customized Components</h4>
+{{#hsn-t headComponent="mod-head" as |comps|}}
+    {{comps.shoulders}}
+    {{#comps.head clickCB=(action "clicked")}}
+        <p>Blah blah blah blah blah</p>
+    {{/comps.head}}
+    {{comps.toes}}
+    {{comps.knees}}
+{{/hsn-t}}
